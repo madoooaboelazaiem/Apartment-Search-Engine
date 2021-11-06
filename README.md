@@ -72,8 +72,7 @@ Only added user registration tests as a proof of concept
 Homealike/
 ┣ __tests__/
 ┃ ┣ __dbHandler.js
-┃ ┣ user.test.js
-┃ ┗ appartment.test.js
+┃ ┗ user.test.js
 ┣ api/
 ┃ ┗ routes/
 ┃   ┗ index.js
