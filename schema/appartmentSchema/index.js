@@ -66,6 +66,7 @@ const intertwined = gql`
     NO_APPARTMENTS_FOUND
     CITY_CANNOT_BE_EMPTY
     COUNTRY_CANNOT_BE_EMPTY
+    NUMBER_OF_ROOMS_INVALID
   }
   type AppartmentConnection {
     """

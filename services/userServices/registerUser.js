@@ -29,11 +29,18 @@ const registerUser = async ({ input }) => {
     confirmPassword &&
     location &&
     location.length !== 0;
-
   if (!accountInputValidation) {
     return {
       success: false,
       message: 'PARAMS_MISSING',
+      user: null,
+      statusCode: 400,
+    };
+  }
+  if (location.length !== 2) {
+    return {
+      success: false,
+      message: 'WRONG_LOCATION',
       user: null,
       statusCode: 400,
     };

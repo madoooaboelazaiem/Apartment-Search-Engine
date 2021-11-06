@@ -62,7 +62,10 @@ const searchAndFilterAppartments = async (
 };
 const validateInput = ({ filterInputs, searchInput, location }) => {
   const validateSearchInput = searchInput && searchInput.length !== 0;
-  if (!validateSearchInput && !filterInputs) {
+  if (
+    !validateSearchInput &&
+    (!filterInputs || Object.keys(filterInputs).length === 0)
+  ) {
     return {
       success: false,
       message: 'PARAMS_MISSING',
@@ -89,7 +92,7 @@ const validateInput = ({ filterInputs, searchInput, location }) => {
     }
     const validateCity =
       filterInputs && filterInputs.city && filterInputs.city.length !== 0;
-    if (!validateCity) {
+    if (!validateCity && filterInputs.city) {
       return {
         success: false,
         message: 'CITY_CANNOT_BE_EMPTY',
@@ -98,10 +101,21 @@ const validateInput = ({ filterInputs, searchInput, location }) => {
     }
     const validateCountry =
       filterInputs && filterInputs.country && filterInputs.country.length !== 0;
-    if (!validateCountry) {
+    if (!validateCountry && filterInputs.country) {
       return {
         success: false,
         message: 'COUNTRY_CANNOT_BE_EMPTY',
+        statusCode: 400,
+      };
+    }
+    const validateNumberOfRooms =
+      filterInputs &&
+      filterInputs.numberOfRooms &&
+      filterInputs.numberOfRooms > 0;
+    if (!validateNumberOfRooms && filterInputs.numberOfRooms) {
+      return {
+        success: false,
+        message: 'NUMBER_OF_ROOMS_INVALID',
         statusCode: 400,
       };
     }

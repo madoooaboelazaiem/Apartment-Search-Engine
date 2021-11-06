@@ -14,6 +14,10 @@ const queries = gql`
     Maximum Distance Range For Location (10,20,30,40,100)KM
     """
     maxDistance: Float
+    """
+    The number of rooms in a given appartment
+    """
+    numberOfRooms: Int
   }
 
   type Query {
