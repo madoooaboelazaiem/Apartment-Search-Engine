@@ -70,6 +70,7 @@ Only added user registration tests as a proof of concept
 - [Mongodb](https://www.mongodb.com/) - Cloud Database
 - [npm](https://www.npmjs.com/) - Dependency Management
 - [GraphQL Apollo](https://www.apollographql.com/) - Data Query Language
+- [Node-Geocoder](https://www.npmjs.com/package/node-geocoder) - Using geocoder(LocationIQ) for retrieving location from longitude/latitude
 
 ## Folder Structure
 
