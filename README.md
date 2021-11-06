@@ -8,9 +8,9 @@ folder structure is inspired by https://softwareontheroad.com/ideal-nodejs-proje
 
 ## For The Deployed Version Using Heroku App
 
-```
+
 [Deployment_Link](https://appartment-task-backend.herokuapp.com)
-```
+
 
 Press on `Query your server` Now you will be able to use the playground and see the queries/mutations and will be able to see the schema with the documentation
 
