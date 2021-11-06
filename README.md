@@ -74,7 +74,7 @@ Only added user registration tests as a proof of concept
 ## Folder Structure
 
 ```
-Homealike/
+Homelike/
 ┣ __tests__/
 ┃ ┣ __dbHandler.js
 ┃ ┗ user.test.js
