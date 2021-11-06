@@ -8,6 +8,7 @@ const searchForCoupons = async (_, { input }, { user }) => {
     return {
       success: false,
       message: getAndValidateUser.message,
+      statusCode: 401,
     };
 
   let searchResuts = await appartments.searchForAppartmentsByName({

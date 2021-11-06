@@ -9,6 +9,7 @@ const createAppartment = async ({ input, user }) => {
     return {
       success: false,
       message: getAndValidateUser.message,
+      statusCode: 401,
     };
   const { name, description, location, numberOfRooms, price, city, country } =
     input;

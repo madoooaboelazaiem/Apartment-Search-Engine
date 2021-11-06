@@ -12,6 +12,7 @@ const fetchUsersFavorites = async (
     return {
       success: false,
       message: getAndValidateUser.message,
+      statusCode: 401,
     };
   const getUsersCreatedAppartments = await users.fetchUsersFavorites({
     _id: user.id,
