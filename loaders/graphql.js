@@ -8,6 +8,8 @@ const graphQLLoader = async (expressServer) => {
   const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
+    introspection: true,
+    playground: true,
     context: async ({ req }) => {
       return authCheck(req);
     },
