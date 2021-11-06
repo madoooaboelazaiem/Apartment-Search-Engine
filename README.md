@@ -1,6 +1,6 @@
 # Homelike Assignment
 
-This repo contains the Payment Gateway Library built with node, express and mongodb
+This repo contains the appartment search engine built with node, express and mongodb
 
 ## Getting Started
 
@@ -38,6 +38,14 @@ run the project
 npm run start-dev
 ```
 
+make sure to add the authorization key/value headers in graphql apollo server for the protected queries/mutations
+example:
+
+```
+Headers: Authorization
+Value: Bearer ${Token: retrieved from login}
+```
+
 ## To run tests:
 
 `npm run test`
@@ -47,6 +55,99 @@ npm run start-dev
 - [Express](https://expressjs.com/) - The web framework used
 - [Mongodb](https://www.mongodb.com/) - Cloud Database
 - [npm](https://www.npmjs.com/) - Dependency Management
+- [GraphQL Apollo](https://www.apollographql.com/) - Data Query Language
+
+## Folder Structure
+
+```
+Homealike/
+┣ __tests__/
+┃ ┣ __dbHandler.js
+┃ ┣ user.test.js
+┃ ┗ appartment.test.js
+┣ api/
+┃ ┗ routes/
+┃   ┗ index.js
+┣ config/
+┃ ┗ index.js
+┣ datasources/
+┃ ┣ appartment.js
+┃ ┣ index.js
+┃ ┗ user.js
+┣ loaders/
+┃ ┣ express.js
+┃ ┣ graphql.js
+┃ ┣ index.js
+┃ ┗ mongo.js
+┣ models/
+┃ ┣ appartment.js
+┃ ┗ user.js
+┣ resolvers/
+┃ ┣ appartmentResolvers/
+┃ ┃ ┣ addAppartmentToFavoritesMutation.js
+┃ ┃ ┣ addAppatmentMutation.js
+┃ ┃ ┣ getAppartmentsQuery.js
+┃ ┃ ┣ getUsersAppartmentsQuery.js
+┃ ┃ ┣ index.js
+┃ ┃ ┣ removeAppartmentFromFavoritesMutation.js
+┃ ┃ ┗ searchAndFilterAppartmentsQuery.js
+┃ ┣ userResolvers/
+┃ ┃ ┣ getUserDataByTokenQuery.js
+┃ ┃ ┣ getUsersFavouritesQuery.js
+┃ ┃ ┣ index.js
+┃ ┃ ┣ userLoginMutation.js
+┃ ┃ ┗ userRegisterMutation.js
+┃ ┗ index.js
+┣ schema/
+┃ ┣ appartmentSchema/
+┃ ┃ ┣ index.js
+┃ ┃ ┣ mutations.js
+┃ ┃ ┗ queries.js
+┃ ┣ userSchema/
+┃ ┃ ┣ index.js
+┃ ┃ ┣ mutations.js
+┃ ┃ ┗ queries.js
+┃ ┗ index.js
+┣ services/
+┃ ┣ appartmentServices/
+┃ ┃ ┣ addAppartmentToFavorites.js
+┃ ┃ ┣ createAppartment.js
+┃ ┃ ┣ fetchAppartments.js
+┃ ┃ ┣ fetchUsersAppartments.js
+┃ ┃ ┣ index.js
+┃ ┃ ┣ removeAppartmentFromFavorites.js
+┃ ┃ ┣ searchAndFilterAppartments.js
+┃ ┃ ┗ searchForAppartments.js
+┃ ┣ userServices/
+┃ ┃ ┣ fetchUser.js
+┃ ┃ ┣ fetchUsersFavorites.js
+┃ ┃ ┣ index.js
+┃ ┃ ┣ registerUser.js
+┃ ┃ ┗ userLogin.js
+┃ ┗ index.js
+┣ subscribers/
+┃ ┣ api.js
+┃ ┗ events.js
+┣ utils/
+┃ ┣ array.js
+┃ ┣ geocoder.js
+┃ ┣ helper.js
+┃ ┣ jwt.js
+┃ ┣ mongo.js
+┃ ┣ pagination.js
+┃ ┣ password.js
+┃ ┗ validation.js
+┣ .env.example
+┣ .eslintrc.json
+┣ .gitignore
+┣ .prettierignore
+┣ .prettierrc.json
+┣ README.md
+┣ app.js
+┣ jest.config.js
+┣ package-lock.json
+┗ package.json
+```
 
 ## Authors
 
