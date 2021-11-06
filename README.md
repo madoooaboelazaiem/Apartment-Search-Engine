@@ -6,6 +6,16 @@ This repo contains the appartment search engine built with node, express and mon
 
 folder structure is inspired by https://softwareontheroad.com/ideal-nodejs-project-structure/ with some modifications like adding datasources, schema and resolvers folder
 
+## For The Deployed Version Using Heroku App
+
+```
+https://appartment-task-backend.herokuapp.com
+```
+
+Press on `Query your server` Now you will be able to use the playground and see the queries/mutations and will be able to see the schema with the documentation
+
+## For Local Version
+
 ### Prerequisites
 
 in order to install this repo you need to make sure you have git, node installed on your machine along with nodemon and the dependencies
