@@ -32,7 +32,7 @@ const searchForCoupons = async (_, { input }, { user }) => {
   }
   return {
     success: true,
-    message: 'APPARTMENTS_EMPTY',
+    message: 'NO_APPARTMENTS_FOUND',
     nodes: [],
     edges: [],
     pageInfo: null,

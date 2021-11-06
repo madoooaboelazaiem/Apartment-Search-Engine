@@ -17,7 +17,7 @@ const mutations = gql`
     message: AppartmentStatus
     statusCode: Int
     """
-    wether the process is success or not
+    whether the process is a success or not
     """
     success: Boolean!
     """
