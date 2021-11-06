@@ -4,7 +4,7 @@ This repo contains the appartment search engine built with node, express and mon
 
 ## Getting Started
 
-folder structure is inspired by https://softwareontheroad.com/ideal-nodejs-project-structure/ with some modifications like adding controllers and dbm folder
+folder structure is inspired by https://softwareontheroad.com/ideal-nodejs-project-structure/ with some modifications like adding datasources, schema and resolvers folder
 
 ### Prerequisites
 
