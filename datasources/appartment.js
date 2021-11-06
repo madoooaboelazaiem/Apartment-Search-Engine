@@ -154,6 +154,10 @@ class Appartments extends MongoDataSource {
     filterInputs && checkIfKeyExists({ object: filterInputs, key: 'country' })
       ? (filterArgs.country = filterInputs.country)
       : filterArgs;
+    filterInputs &&
+    checkIfKeyExists({ object: filterInputs, key: 'numberOfRooms' })
+      ? (filterArgs.numberOfRooms = filterInputs.numberOfRooms)
+      : filterArgs;
     let searchQuery = {};
     if (searchInput && searchInput.length !== 0) {
       searchQuery = {
