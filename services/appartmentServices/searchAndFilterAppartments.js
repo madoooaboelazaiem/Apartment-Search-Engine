@@ -12,6 +12,7 @@ const searchAndFilterAppartments = async (
     return {
       success: false,
       message: getAndValidateUser.message,
+      statusCode: 401,
     };
   const location = getAndValidateUser.user.location;
   const isInputsValid = validateInput({

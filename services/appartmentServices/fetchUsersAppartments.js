@@ -12,6 +12,7 @@ const fetchUsersAppartments = async (
     return {
       success: false,
       message: getAndValidateUser.message,
+      statusCode: 401,
     };
   const getUsersCreatedAppartments = await appartments.getUsersAppartments({
     user: user.id,
