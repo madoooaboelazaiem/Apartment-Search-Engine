@@ -45,7 +45,12 @@ run the project
 ```
 npm run start-dev
 ```
-
+Steps:
+```
+Start by the mutation: registerUser
+Then by loginUser: copy the token and add it to the playground headers at the bottom of the page and concatenate it to `Bearer ${token}` with the key:Authorization
+Then proceed with the rest of the queries/mutations
+```
 make sure to add the authorization key/value headers in graphql apollo server for the protected queries/mutations
 example:
 
