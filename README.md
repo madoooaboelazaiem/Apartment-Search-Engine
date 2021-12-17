@@ -1,4 +1,3 @@
-# Homelike Assignment
 
 This repo contains the appartment search engine built with node, express and mongodb
 
